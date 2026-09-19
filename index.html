@@ -695,9 +695,9 @@ UNLOCK_DATE: new Date('2026-09-20T16:35:00'),
 
   /* ---- EmailJS (fill these 3 in to get an email when she says Yes) ---- */
   EMAILJS: {
-    publicKey:  'YOUR_PUBLIC_KEY',
-    serviceId:  'YOUR_SERVICE_ID',
-    templateId: 'YOUR_TEMPLATE_ID'
+    publicKey:  'q0iD_DESSly_orkTV',
+    serviceId:  'service_q6mcm47',
+    templateId: 'template_zsn6bkt'
   }
 };
 /* ============================================================ */
@@ -1122,7 +1122,7 @@ function revealLetter(){
 function sendEmail(){
   const { publicKey, serviceId, templateId } = CONFIG.EMAILJS;
 
-  if (!publicKey || publicKey === 'YOUR_PUBLIC_KEY'){
+  if (!publicKey || publicKey === 'nKsVG6KvsBIyjhNzDEo3j'){
     console.warn('EmailJS not configured — skipping notification.');
     return;
   }
@@ -1131,10 +1131,10 @@ function sendEmail(){
   emailjs.init({ publicKey });
 
   emailjs.send(serviceId, templateId, {
-    her_name: CONFIG.HER_NAME,
-    your_name: CONFIG.YOUR_NAME,
+    her_name: CONFIG.Thu Hương,
+    your_name: CONFIG.Yuan,
     answer: 'YES 💛',
-    message: `${CONFIG.HER_NAME} said YES to being your Valentine!`,
+    message: `${CONFIG.Thu Hương} said YES to being your Valentine!`,
     date: new Date().toLocaleString()
   })
   .then(() => console.log('💛 Email sent!'))
